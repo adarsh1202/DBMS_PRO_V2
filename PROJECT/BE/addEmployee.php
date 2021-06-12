@@ -4,8 +4,6 @@ include 'dbconnection.php';
 // $showError = false; 
 // $exists=false;
 
-echo adarsh
-
 if($_SERVER["REQUEST_METHOD"] == "POST") {
       
     // Include file which makes the
