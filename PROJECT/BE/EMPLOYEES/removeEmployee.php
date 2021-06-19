@@ -4,12 +4,10 @@
 // $showAlert = false; 
 // $showError = false; 
 // $exists=false;
-    
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-    // Include file which makes the
-    // Database Connection.
-    include 'dbconnection.php';      
+
+    include 'dbconnection.php';
+
+    $id=$_GET["id"];
      
     
     $name=$_POST["emp_name"];
@@ -42,8 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Employee does not exist";
     }
 
-    
-}//end if   
+ 
     
 ?>
 

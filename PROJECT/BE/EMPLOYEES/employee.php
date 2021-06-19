@@ -26,14 +26,14 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addProduct.html" style="color: white;">Add Product</a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
             
             </button>
      
      
            
 
-<u><h1 class="text-center">Product Details</h1></u> 
+<u><h1 class="text-center">Employee Details</h1></u> 
 
 <br>
 
@@ -42,10 +42,10 @@
 <tr class="thead-dark">
 <th>ID</th>
 <th>Name</th>
-<th>Price</th>
-<th>Availability</th>
-<th>Category</th>
-<th>Description</th>
+<th>Gender</th>
+<th>Contact</th>
+<th>Address</th>
+<th>Salary</th>
 <th></th>
 <th></th>
 </tr>
@@ -54,9 +54,9 @@
 
 include '../dbconnection.php';
 
-$fetch_products_query="SELECT * from `products` ";
+$fetch_employees_query="SELECT * from `employees` ";
 
-$result=mysqli_query($conn,$fetch_products_query   );
+$result=mysqli_query($conn,$fetch_employees_query   );
 
 if(mysqli_num_rows($result)>0)
 {
@@ -64,15 +64,16 @@ if(mysqli_num_rows($result)>0)
     while($row = $result->fetch_assoc()) {
 //<td><a href='www.google.com'>". $row["cust_name"] ."</a></td>
         echo "<tr>
-        <td>". $row["prod_id"] ."</td>
-        <td>". $row["prod_name"] ."</td>
-        <td>". $row["prod_price"] ."</td>
-        <td>". $row["prod_availability"] ."</td>
-        <td>". $row["prod_category"] ."</td>
-        <td>". $row["prod_description"] ."</td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td>". $row["emp_id"] ."</td>
+        <td>". $row["emp_name"] ."</td>
+        <td>". $row["emp_gender"] ."</td>
+        <td>". $row["emp_phno"] ."</td>
+        <td>". $row["emp_address"] ."</td>
+        <td>". $row["emp_salary"] ."</td>
+
+    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/editEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
         <span><strong>Edit</strong></span></a></td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/removeEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
         <span><strong>Remove</strong></span></a></td>
         </tr>";
       }

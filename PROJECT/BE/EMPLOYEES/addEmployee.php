@@ -30,6 +30,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     echo'<script>alert("Employee Added Successfully")</script>';
+    header("Location: http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/employee.php");
+
+
     
 }
     

@@ -27,18 +27,11 @@
 include '../dbconnection.php';
 
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-    // Include file which makes the
-    // Database Connection.
-     
-    
-    $namee="'".$_POST["employee_name"]."'";
-    $contacts="'".$_POST["contact"]."'";
+$id=$_GET["id"];
 
 
 
-$fetch_employee_details_sql="SELECT * from `employees` WHERE `emp_name`=$namee AND `emp_phno`=$contacts";
+$fetch_employee_details_sql="SELECT * from `employees` WHERE `emp_id`=$id";
 
 //$fetch_product_details_sql="SELECT * from `products` WHERE `prod_id`=6";
 
@@ -65,7 +58,7 @@ if($num == 1)
 
 
 
-}
+
 
 ?>
 
