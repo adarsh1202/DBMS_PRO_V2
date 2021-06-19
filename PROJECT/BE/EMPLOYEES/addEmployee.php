@@ -1,5 +1,5 @@
 <?php
-include 'dbconnection.php';      
+include '../dbconnection.php';      
 // $showAlert = false; 
 // $showError = false; 
 // $exists=false;

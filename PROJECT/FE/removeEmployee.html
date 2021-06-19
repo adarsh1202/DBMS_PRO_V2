@@ -22,29 +22,35 @@
     
     <div class="container my-4 ">
         
-       <h1 class="text-center">Hello!!</h1> 
+       <h1 class="text-center">Hello!!</h1>
+       <form action="../BE/EMPLOYEES/removeEmployee.php" method="post"> 
     
-       <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/product.php" style="color: white;">Products</a>
-            
-       </button>
+       <div class="form-group"> 
+        <label for="emp_name">Name</label> 
+    <input type="text" class="form-control" id="emp_name"
+        name="emp_name" aria-describedby="emailHelp" required>    
+    </div>
 
 
-       <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/employee.html" style="color: white;">Employees</a>
-            
-       </button>
+    <div class="form-group"> 
+        <label for="contact">Contact</label> 
+         <input type="text" class="form-control" id="contact"
+        name="contact" aria-describedby="emailHelp" required>    
+    </div>
 
 
-       <button type="button" class="btn btn-primary"><a href="" style="color: white;">Orders</a>
-            
-       </button>
+    <div class="form-group"> 
+        <label for="emp_leaving_date">Date</label><br>
+        <input type="text" class="form-control" id="emp_leaving_date" name="emp_leaving_date" required>
+    </div>
 
 
-       <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/vehicle.html" style="color: white;">Vehicles</a>
-            
-       </button>
-
-            
-     
+    <button type="submit" class="btn btn-primary">
+        Remove
+        </button>
+      
+        <button type="reset" class="btn btn-primary">Reset
+        </button> 
                 
     </div>
         

@@ -26,22 +26,48 @@
 
 include '../dbconnection.php';
 
-$fetch_product_details_sql="SELECT * from `products` WHERE prod_id='6'";
+
+//if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+    // Include file which makes the
+    // Database Connection.
+     
+    
+    // $namee="'".$_POST["product_name"]."'";
+    // $descriptione="'".$_POST["description"]."'";
+
+    $id=$_GET["id"];
+
+
+//$fetch_product_details_sql="SELECT * from `products` WHERE `prod_name`=$namee AND `prod_description`=$descriptione";
+
+$fetch_product_details_sql="SELECT * from `products` WHERE `prod_id`=$id";
+
 
 $result=mysqli_query($conn,$fetch_product_details_sql);
 
-if(mysqli_num_rows($result)>0)
+$num = mysqli_num_rows($result); 
+
+
+if($num == 1)
 {
 
+   
     $prouct_details=mysqli_fetch_assoc($result);
 
-        $id=$prouct_details['prod_id'];
-        $name=$prouct_details['prod_name'];
-        $category=$prouct_details['prod_category'];
-        $price=$prouct_details['prod_price'];
-        $description=$prouct_details['prod_description'];
-        $stock=$prouct_details['prod_availability'];
+        $id=$prouct_details["prod_id"];
+        $name=$prouct_details["prod_name"];
+        $category=$prouct_details["prod_category"];
+        $price=$prouct_details["prod_price"];
+        $description=$prouct_details["prod_description"];
+        $stock=$prouct_details["prod_availability"];
+        //echo $id;
 }
+
+
+
+
+//}
 
 ?>
 
@@ -56,12 +82,14 @@ if(mysqli_num_rows($result)>0)
         <div class="form-group"> 
             <label for="product_name">Name</label> 
         <input type="text" class="form-control" id="product_name"
-            name="product_name" aria-describedby="emailHelp" value=<?php echo $name; ?> required disabled>
-
+            name="product_name" aria-describedby="emailHelp"  required disabled     value=<?php echo $name; ?>>
+<!-- value=<?php echo $name; ?> -->
             <!-- product id field -->
 
             <input type="text" class="form-control" id="product_id"
-            name="product_id" aria-describedby="emailHelp" value=<?php echo $id; ?> hidden>     
+            name="product_id" aria-describedby="emailHelp" value= <?php echo $id; ?> hidden
+            >   
+              <!--value=<?php echo $id; ?>   -->
             
             <!-- product id field -->
 
@@ -80,22 +108,32 @@ if(mysqli_num_rows($result)>0)
 
         <div class="form-group"> 
             <label for="description">Description</label><br>
-           <textarea type="textarea" class="form-control" name="description" id="description" >
-           <?php echo $description; ?>      
+           <textarea type="textarea" class="form-control" name="description" id="description"   >
+            <?php echo $description; ?>
                </textarea>
         </div>
 
+        <!-- <?php echo $description; ?>   -->
+
         <div class="form-group"> 
             <label for="price">Price</label> 
-             <input type="number" class="form-control" id="price" value=<?php echo $price; ?>
-            name="price" aria-describedby="emailHelp" required>    
+             <input type="number" class="form-control" id="price" 
+            name="price" aria-describedby="emailHelp"
+            value=<?php echo $price; ?>
+            required>    
         </div>
+
+       <!-- value=<?php echo $price; ?> -->
 
         <div class="form-group"> 
             <label for="stock">Stock</label> 
         <input type="text" class="form-control" id="stock"
-            name="stock" aria-describedby="emailHelp" required value=<?php echo $stock; ?>>    
+            name="stock" aria-describedby="emailHelp" value=<?php echo $stock; ?> required 
+            
+            >    
         </div>
+
+        <!-- value=<?php echo $stock; ?> -->
         
         <button type="submit" class="btn btn-primary">
         Save

@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if($num == 0) {
         if($password == $cpassword) {
     
-            print($sql_customer_login);
+            //print($sql_customer_login);
 
             
             
@@ -58,12 +58,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: http://localhost/DBMS_PRO/PROJECT/FE/loginPage.html");
             exit();
-         }  
+         }
+         
+         else
+         {
+            echo'<script>alert("Passwords do not match")</script>';
+         }
     }// end if 
     
    if($num>0) 
    {
-      $exists="Username not available"; 
+    echo'<script>alert("Username already exists.")</script>';
+      echo "Username not available. Please choose another one"; 
    } 
     
 }//end if   
