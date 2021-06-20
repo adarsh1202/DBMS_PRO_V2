@@ -49,6 +49,8 @@ if($num == 1)
         $id=$employee_details["emp_id"];
         $name=$employee_details["emp_name"];
         $gender=$employee_details["emp_gender"];
+        $dob=$employee_details["emp_dob"];
+        $doj=$employee_details["emp_join_date"];
         $contact=$employee_details["emp_phno"];
         $address=$employee_details["emp_address"];
         $salary=$employee_details["emp_salary"];
@@ -74,14 +76,14 @@ if($num == 1)
     <div class="form-group"> 
             <label for="employee_id">Employee ID</label> 
         <input type="number" class="form-control" id="employee_id"
-            name="employee_id" aria-describedby="emailHelp"  required      value=<?php echo $id; ?>>
+            name="employee_id" aria-describedby="emailHelp"  required  disabled    value=<?php echo $id; ?>>
 </div>
 
        
     <div class="form-group"> 
             <label for="employee_name">Name</label> 
         <input type="text" class="form-control" id="employee_name"
-            name="employee_name" aria-describedby="emailHelp"  required     value=<?php echo $name; ?>>
+            name="employee_name" aria-describedby="emailHelp"  required  disabled   value=<?php echo $name; ?>>
 
      </div>
 
@@ -90,10 +92,22 @@ if($num == 1)
      <div class="form-group"> 
             <label for="employee_gender">Gender</label> 
         <input type="text" class="form-control" id="employee_gender"
-            name="employee_gender" aria-describedby="emailHelp"  required      value=<?php echo $gender; ?>>
+            name="employee_gender" aria-describedby="emailHelp"  required disabled     value=<?php echo $gender; ?>>
 
             </div>
 
+
+            <div class="form-group"> 
+            <label for="birthday">DOB</label><br>
+            <input type="date" class="form-control" id="birthday" name="birthday" required disabled   value=<?php echo $dob; ?>>
+        </div>
+
+
+
+        <div class="form-group"> 
+            <label for="join_date">Joining Date</label><br>
+            <input type="date" class="form-control" id="join_date" name="join_date" required  disabled   value=<?php echo $doj; ?>>
+        </div>
 
         <div class="form-group"> 
             <label for="employee_contact">Contact</label> 
@@ -124,8 +138,6 @@ if($num == 1)
         <button type="submit" class="btn btn-primary">
         Save
         </button>
-            <button type="reset" class="btn btn-primary">Reset
-            </button> 
             
     </form> 
 </div>

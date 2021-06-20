@@ -9,14 +9,10 @@
 
     $id=$_GET["id"];
      
-    
-    $name=$_POST["emp_name"];
-    $contact=$_POST["contact"];
-    $leave_date="'".$_POST["emp_leaving_date"]."'";      
-    echo $leave_date;
 
 
-    $sql = "SELECT * from employees where emp_name='$name' and emp_phno='$contact'";
+    $sql = "SELECT * from employees where emp_id='$id'";
+    $date=date("Y-m-d");
     
 
     $result = mysqli_query($conn, $sql);
@@ -28,9 +24,10 @@
     // or not in our Database
     if($num > 0) 
     {
-        $delete_employee_query="UPDATE employees SET emp_leaving_date= $leave_date WHERE emp_name='$name' and emp_phno='$contact'";
+        $delete_employee_query="UPDATE `employees` SET `emp_leaving_date`='$date' WHERE emp_id='$id'";
         $result = mysqli_query($conn, $delete_employee_query);
-    
+        header("Location: http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/employee.php");
+        echo $date;
         echo "Employee removed successfully";
     }// end if 
     
