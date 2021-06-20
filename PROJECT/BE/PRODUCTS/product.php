@@ -16,7 +16,9 @@
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
     
 <body>
@@ -70,10 +72,12 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["prod_availability"] ."</td>
         <td>". $row["prod_category"] ."</td>
         <td>". $row["prod_description"] ."</td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='fas fa-edit'></span>
         <span><strong>Edit</strong></span></a></td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='glyphicon glyphicon-edit'></span>
-        <span><strong>Remove</strong></span></a></td>
+        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='fas fa-trash-alt' style='color:red'></span>
+        <span><strong>Remove</strong></span></a>
+        </button>
+        </td>
         </tr>";
       }
 }
