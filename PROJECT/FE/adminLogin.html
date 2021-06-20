@@ -23,7 +23,7 @@
 <div class="container my-4 ">
     
     <h1 class="text-center">Admin Login</h1> 
-    <form action="../BE/adminLogin.php" method="post">
+    <form action="../BE/ADMIN/adminLogin.php" method="post">
     
 
 
@@ -31,21 +31,21 @@
         <div class="form-group"> 
             <label for="username">Username</label> 
         <input type="text" class="form-control" id="username"
-            name="username" aria-describedby="emailHelp">    
+            name="username" aria-describedby="emailHelp"  required>    
         </div>
     
         <div class="form-group"> 
             <label for="password">Password</label> 
             <input type="password" class="form-control"
-            id="password" name="password"> 
+            id="password" name="password"  required> 
         </div>
     
         
+        <button type="submit" class="btn btn-primary">
+            Login
+            </button>
 
-
-        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;">Login</a>
-            
-
+        
         <span></span>
   
             <button type="reset" class="btn btn-primary">Reset
