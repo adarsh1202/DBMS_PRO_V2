@@ -29,17 +29,20 @@ function my_function(id) {
   product_quantities.push(product_quantity);
   console.log(product_ids); 
   console.log(product_quantities);
-  var request = new XMLHttpRequest();
-  var product_quantity=document.getElementById("quantity_"+id).value;
-  request.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      alert(this.responseText);
-    }   
-  };
-  request.open("GET", "orderProduct.php?product_id="+product_ids+"&product_quantity="+product_quantities, true);
-  request.send();
   document.getElementById('addCartBtn_'+id).hidden=true;
   document.getElementById('removeCartBtn_'+id).hidden=false;
+}
+
+function createOrder(){
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+       alert(this.responseText);
+     }   
+   };
+  request.open("GET", "orderProduct.php?product_id="+product_ids+"&product_quantity="+product_quantities, true);
+  request.send();
 }
 </script>
 <body>
@@ -47,22 +50,6 @@ function my_function(id) {
 <!-- get product details starts -->
 
 <div class="container my-4 ">
-
-
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addProduct.html" style="color: white;">Add Product</a>
-            
-            </button>
-     
-     
-            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/removeProduct.html" style="color: white;">Remove Product</a>
-                 
-            </button>
-     
-     
-     
-            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/updateProduct.html" style="color: white;">Update Product Details</a>
-                 
-            </button>
 
 <u><h1 class="text-center">Product Details</h1></u> 
 
@@ -124,7 +111,8 @@ if(mysqli_num_rows($result)>0)
 <!--  get product details ends-->
 </table>
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/updateProduct.html" style="color: white;">Place Order</a>
+<button type="button" onclick="createOrder()" class="btn btn-primary">Place Order
+<!-- <a href="http://localhost/DBMS_PRO/PROJECT/FE/updateProduct.html" style="color: white;">Place Order</a> -->
                  
                  </button>
 <!-- </form> -->
