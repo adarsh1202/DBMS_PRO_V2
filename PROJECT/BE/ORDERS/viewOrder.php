@@ -17,6 +17,9 @@
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 </head>
     
 <body>
@@ -26,9 +29,7 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
-            
-            </button>
+
 
 
      
@@ -78,7 +79,7 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["quantity"] ."</td>
 
 
-        <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/returnItem.php?order_id=".$row["order_id"]."&prod_id=".$row["prod_id"]."&order_quantity=".$row["quantity"]."&quantity=".$row1["prod_availability"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/returnItem.php?order_id=".$row["order_id"]."&prod_id=".$row["prod_id"]."&order_quantity=".$row["quantity"]."&quantity=".$row1["prod_availability"]."'><i class='fa fa-undo' aria-hidden='true'></i></span>
         <span><strong>Return</strong></span></a></td>
         </tr>";
       }

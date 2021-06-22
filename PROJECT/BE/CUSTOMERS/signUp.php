@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $result = mysqli_query($conn, $sql_customer_login);
 
-            header("Location: http://localhost/DBMS_PRO_V2/PROJECT/FE/loginPage.html");
+            header("Location: http://localhost/DBMS_PRO/PROJECT/FE/loginPage.html");
             exit();
          }
          

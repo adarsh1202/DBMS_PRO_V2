@@ -79,12 +79,12 @@ $id=$row["cust_id"];
 
         
     
-        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
             
             </button> 
 
 
-        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/createOrder.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>     Create Order</a>
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/createOrder.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>     Create Order</a>
             
         </button> 
         

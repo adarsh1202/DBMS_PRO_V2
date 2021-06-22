@@ -32,35 +32,14 @@
             name="vehicle_no" aria-describedby="emailHelp" required>    
         </div>
 
-        <div class="form-group"> 
-            <label for="employee_id">Employee</label><br>
-            <select class="form-control" name="employee_id" id="employee_id" >
-                <option selected>-- Select Employee --</option>
-                
- <!-- php code for employee dropdown starts -->
-                <?php
-                $fetch_employee_id="SELECT * FROM `employees`";
-                $res1=mysqli_query($conn,$fetch_employee_id);
-                
-                
-                if(mysqli_num_rows($res1)>0)
-                {
-                
-                    while($row = $res1->fetch_assoc()) {
-                        echo "<option value=".$row['emp_id'].">".$row['emp_name']."</option>";
-                        
-                    }
-                }
-                ?>
-                <!-- php code for employee dropdown ends -->
-             </select>
-         </div>
- 
 
         <div class="form-group"> 
-            <label for="employee_id">Employee ID</label><br>
-            <input type="number" class="form-control" id="employee_id" name="employee_id" required>
+            <label for="vehicle_name">Vehicle Name</label> 
+        <input type="text" class="form-control" id="vehicle_name"
+            name="vehicle_name" aria-describedby="emailHelp" required>    
         </div>
+
+      
         
         <button type="submit" class="btn2">
         Save

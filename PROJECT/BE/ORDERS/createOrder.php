@@ -48,7 +48,7 @@ function createOrder(){
      if (this.readyState == 4 && this.status == 200) {
        alert("Order Placed Successfully!!");
       //alert(this.response);
-      window.location.href = 'http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $ids;?>';
+      window.location.href = 'http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $ids;?>';
      }   
    };
   request.open("GET", "orderProduct.php?product_id="+product_ids+"&product_quantity="+product_quantities+"&cust_id=<?php echo $ids;?>", true);

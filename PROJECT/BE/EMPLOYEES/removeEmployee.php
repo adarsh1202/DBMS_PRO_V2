@@ -26,7 +26,7 @@
     {
         $delete_employee_query="UPDATE `employees` SET `emp_leaving_date`='$date' WHERE emp_id='$id'";
         $result = mysqli_query($conn, $delete_employee_query);
-        header("Location: http://localhost/DBMS_PRO_V2/PROJECT/BE/EMPLOYEES/employee.php");
+        header("Location: http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/employee.php");
         echo $date;
         echo "Employee removed successfully";
     }// end if 

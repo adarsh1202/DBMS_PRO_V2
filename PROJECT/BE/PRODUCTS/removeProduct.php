@@ -19,7 +19,7 @@ include '../dbconnection.php';
 
         echo "Product removed successfully";
 
-        header("Location: http://localhost/DBMS_PRO_V2/PROJECT/BE/PRODUCTS/product.php");
+        header("Location: http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/product.php");
 
        
    }

@@ -26,9 +26,6 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
-            
-            </button>
      
      
            
@@ -68,7 +65,7 @@ if(mysqli_num_rows($result)>0)
        
 
     <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/viewOrder.php?id=".$row["order_id"]."'><span class='glyphicon glyphicon-edit'></span>
-        <span><strong>view</strong></span></a></td>
+        <span><strong>View</strong></span></a></td>
         </tr>";
       }
 }

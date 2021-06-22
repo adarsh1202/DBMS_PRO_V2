@@ -74,9 +74,9 @@ if($num == 1)
     
 
     <div class="form-group"> 
-            <label for="employee_id">Employee ID</label> 
+            <label for="employee_id"></label> 
         <input type="number" class="form-control" id="employee_id"
-            name="employee_id" aria-describedby="emailHelp"  required  disabled    value=<?php echo $id; ?>>
+            name="employee_id" aria-describedby="emailHelp"  required    hidden  value=<?php echo $id; ?>>
 </div>
 
        

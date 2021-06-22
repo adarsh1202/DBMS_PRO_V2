@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //echo'<script>alert("Employee Updated Successfully")</script>';
 
-    header("Location: http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/order.php");
+    header("Location: http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/order.php");
 
 
 

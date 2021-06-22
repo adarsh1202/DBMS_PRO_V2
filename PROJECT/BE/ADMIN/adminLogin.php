@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"]; 
     $password = $_POST["password"]; 
             
-    $cpassword="admin";
+    
 
 
     
@@ -21,9 +21,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // the username is already present 
     // or not in our Database
 
-        if($password == $cpassword  && $username == "admin") {
+        if($password == "admin"  && $username == "admin") {
 
-            header("Location: http://localhost/DBMS_PRO_V2/PROJECT/FE/adminInterface.html");
+            header("Location: http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html");
          }  
     
    else 

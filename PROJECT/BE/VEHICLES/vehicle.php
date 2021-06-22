@@ -28,7 +28,7 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addVehicle.html" style="color: white;">Add Vehicle</a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addVehicle.html" style="color: white;"><i class="fa fa-plus" aria-hidden="true"></i> <strong> Add Vehicle</strong></a>
             
             </button>
      
@@ -43,7 +43,7 @@
 
 <tr class="thead-dark">
 <th>Vehice Registration Number</th>
-<th>Driver</th>
+<th>Vehicle Name</th>
 
 </tr>
 
@@ -61,7 +61,7 @@ if(mysqli_num_rows($result)>0)
     while($row = $result->fetch_assoc()) {
         echo "<tr>
         <td>". $row["vehicle_reg_no"] ."</td>
-        <td>". $row["emp_id"] ."</td>
+        <td>". $row["vehicle_name"] ."</td>
        
         </tr>";
       }
@@ -71,6 +71,11 @@ if(mysqli_num_rows($result)>0)
 
 <!--  get product details ends-->
 </table>
+
+
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
+            
+            </button>
 
 </div>
 <!-- Optional JavaScript --> 

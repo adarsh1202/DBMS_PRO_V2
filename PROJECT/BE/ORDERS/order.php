@@ -17,6 +17,8 @@
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
     
 <body>
@@ -24,11 +26,6 @@
 <!-- get product details starts -->
 
 <div class="container my-4 ">
-
-
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
-            
-            </button>
      
      
            
@@ -71,8 +68,8 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["emp_id"] ."</td>
        
 
-    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/editorder.php?id=".$row["order_id"]."'><span class='glyphicon glyphicon-edit'></span>
-        <span><strong>Edit</strong></span></a></td>
+    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/editorder.php?id=".$row["order_id"]."'><span class='fas fa-edit'></span>
+    <span><strong  style='color:black' >Edit</strong></span></a></td>
         </tr>";
       }
 }
@@ -81,6 +78,11 @@ if(mysqli_num_rows($result)>0)
 
 <!--  get product details ends-->
 </table>
+
+
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
+            
+            </button>
 
 </div>
 <!-- Optional JavaScript --> 
