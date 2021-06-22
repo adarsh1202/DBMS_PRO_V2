@@ -9,6 +9,9 @@
     <meta name="viewport" content=
         "width=device-width, initial-scale=1, 
         shrink-to-fit=no">
+        <link rel="stylesheet" href="./style1.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&family=Cabin:ital,wght@1,600&family=Crete+Round:ital@1&display=swap" rel="stylesheet">
     
     <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href=
@@ -19,8 +22,12 @@
 </head>
     
 <body>
+    <div class="loginbox">
+        <div class="center1">
+            <img src="img13.jpg" class ="avatar">
+            <div class="container1">
     
-<div class="container my-4 ">
+
     
     <h1 class="text-center">Admin Login</h1> 
     <form action="../BE/ADMIN/adminLogin.php" method="post">
@@ -28,27 +35,31 @@
 
 
 
-        <div class="form-group"> 
+        <div class="form-group2"> 
             <label for="username">Username</label> 
         <input type="text" class="form-control" id="username"
             name="username" aria-describedby="emailHelp"  required>    
         </div>
-    
-        <div class="form-group"> 
+        <br>
+        <div class="form-group2"> 
             <label for="password">Password</label> 
             <input type="password" class="form-control"
             id="password" name="password"  required> 
         </div>
-    
+    <br>
+    <br>
+
         
-        <button type="submit" class="btn btn-primary">
-            Login
+        <button type="submit" class="btn1">
+            <a  href="http://localhost/DBMS_PRO_V2/PROJECT/FE/adminInterface.html"
+            style="color: white;">Login</a>
+            
             </button>
 
         
         <span></span>
   
-            <button type="reset" class="btn btn-primary">Reset
+            <button type="reset" class="btn1">Reset
             </button> 
             
     </form> 

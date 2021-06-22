@@ -28,7 +28,7 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addProduct.html" style="color: white;"><i class="fa fa-plus" aria-hidden="true"></i> <strong> Add Product </strong></a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addProduct.html" style="color: white;"><i class="fa fa-plus" aria-hidden="true"></i> <strong> Add Product </strong></a>
             
             </button>
      
@@ -72,9 +72,9 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["prod_availability"] ."</td>
         <td>". $row["prod_category"] ."</td>
         <td>". $row["prod_description"] ."</td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='fas fa-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='fas fa-edit'></span>
         <span><strong  style='color:black' >Edit</strong></span></a></td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='fas fa-trash-alt' style='color:red'></span>
+        <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='fas fa-trash-alt' style='color:red'></span>
         <span><strong style='color:black'>Remove</strong></span></a>
         </button>
         </td>
@@ -88,7 +88,7 @@ if(mysqli_num_rows($result)>0)
 <!--  get product details ends-->
 </table>
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
             
             </button>
 

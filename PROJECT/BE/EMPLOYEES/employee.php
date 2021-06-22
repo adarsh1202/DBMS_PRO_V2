@@ -26,7 +26,7 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
             
             </button>
      
@@ -77,9 +77,9 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["emp_join_date"] ."</td>
         <td>". $row["emp_leaving_date"] ."</td>
 
-    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/editEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
+    <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/EMPLOYEES/editEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
         <span><strong>Edit</strong></span></a></td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/EMPLOYEES/removeEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/EMPLOYEES/removeEmployee.php?id=".$row["emp_id"]."'><span class='glyphicon glyphicon-edit'></span>
         <span><strong>Remove</strong></span></a></td>
         </tr>";
       }

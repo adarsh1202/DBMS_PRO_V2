@@ -26,7 +26,7 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
             
             </button>
 
@@ -78,7 +78,7 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["quantity"] ."</td>
 
 
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/returnItem.php?order_id=".$row["order_id"]."&prod_id=".$row["prod_id"]."&order_quantity=".$row["quantity"]."&quantity=".$row1["prod_availability"]."'><span class='glyphicon glyphicon-edit'></span>
+        <td> <a href='http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/returnItem.php?order_id=".$row["order_id"]."&prod_id=".$row["prod_id"]."&order_quantity=".$row["quantity"]."&quantity=".$row1["prod_availability"]."'><span class='glyphicon glyphicon-edit'></span>
         <span><strong>Return</strong></span></a></td>
         </tr>";
       }

@@ -25,18 +25,18 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addProduct.html" style="color: white;">Add Product</a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/addProduct.html" style="color: white;">Add Product</a>
             
             </button>
      
      
-            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/removeProduct.html" style="color: white;">Remove Product</a>
+            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/removeProduct.html" style="color: white;">Remove Product</a>
                  
             </button>
      
      
      
-            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/updateProduct.html" style="color: white;">Update Product Details</a>
+            <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO_V2/PROJECT/FE/updateProduct.html" style="color: white;">Update Product Details</a>
                  
             </button>
 

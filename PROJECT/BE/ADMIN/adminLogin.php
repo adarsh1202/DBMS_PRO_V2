@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if($password == $cpassword  && $username == "admin") {
 
-            header("Location: http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html");
+            header("Location: http://localhost/DBMS_PRO_V2/PROJECT/FE/adminInterface.html");
          }  
     
    else 

@@ -78,6 +78,6 @@ $date=date("Y-m-d");
 
 
 
- header("Location: http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=$cust_id");
+ header("Location: http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/orderHistory.php?id=$cust_id");
 
 ?>

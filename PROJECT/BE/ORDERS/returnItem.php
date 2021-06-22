@@ -35,6 +35,6 @@ $quantity=$_GET["quantity"];
     $update_bill_amount="UPDATE `orders` SET bill_amount=$updated_bill_amount WHERE order_id=$order_id";
     mysqli_query($conn,$update_bill_amount);
 
-    header("Location: http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/viewOrder.php?id=$order_id");
+    header("Location: http://localhost/DBMS_PRO_V2/PROJECT/BE/ORDERS/viewOrder.php?id=$order_id");
 
 ?>

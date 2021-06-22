@@ -15,41 +15,49 @@
 "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-        crossorigin="anonymous">  
+        crossorigin="anonymous"> 
+        <link rel="stylesheet" href="style1.css"> 
 </head>
 
 <body>
+
+        <div class="center">
+    <img class="bg" src="img5.jpg" alt="Grocery shoping">
     
-    <div class="container my-4 ">
-        
-       <h1 class="text-center">Hello!!</h1>
+    <div class="container4 ">
+       <h1 class="text-center">Enter the Employee's details.</h1>
        <form action="../BE/EMPLOYEES/removeEmployee.php" method="post"> 
-    
+        <br>
+        <br>
+        <br>
+
        <div class="form-group"> 
         <label for="emp_name">Name</label> 
     <input type="text" class="form-control" id="emp_name"
-        name="emp_name" aria-describedby="emailHelp" required>    
+        name="emp_name" placeholder="Enter the employee name" aria-describedby="emailHelp" required>    
     </div>
 
 
     <div class="form-group"> 
         <label for="contact">Contact</label> 
          <input type="text" class="form-control" id="contact"
-        name="contact" aria-describedby="emailHelp" required>    
+        name="contact"placeholder="Enter the employee's contact number" aria-describedby="emailHelp" required>    
     </div>
 
 
     <div class="form-group"> 
         <label for="emp_leaving_date">Date</label><br>
-        <input type="text" class="form-control" id="emp_leaving_date" name="emp_leaving_date" required>
+        <input type="text" class="form-control" id="emp_leaving_date" name="emp_leaving_date" placeholder="Enter the leaving date" required>
     </div>
+<br>
+<br>
 
 
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" class="btn1">
         Remove
         </button>
       
-        <button type="reset" class="btn btn-primary">Reset
+        <button type="reset" class="btn1">Reset
         </button> 
                 
     </div>
