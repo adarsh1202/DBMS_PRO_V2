@@ -16,9 +16,7 @@
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
-        <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
     
 <body>
@@ -28,27 +26,26 @@
 <div class="container my-4 ">
 
 
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addProduct.html" style="color: white;"><i class="fa fa-plus" aria-hidden="true"></i> <strong> Add Product </strong></a>
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/addEmployee.html" style="color: white;">Add Employee</a>
             
             </button>
      
      
            
 
-<u><h1 class="text-center">Product Details</h1></u> 
+<u><h1 class="text-center">Orders</h1></u> 
 
 <br>
 
 <table class="table table-striped table-bordered">
 
 <tr class="thead-dark">
-<th>ID</th>
-<th>Name</th>
-<th>Price</th>
-<th>Availability</th>
-<th>Category</th>
-<th>Description</th>
-<th></th>
+<th>Order ID</th>
+<th>Customer ID</th>
+<th>Order Date</th>
+<th>Bill Amount</th>
+<th>Delivery Status</th>
+<th>Employee ID</th>
 <th></th>
 </tr>
 
@@ -56,9 +53,9 @@
 
 include '../dbconnection.php';
 
-$fetch_products_query="SELECT * from `products` ";
+$fetch_employees_query="SELECT * from `orders` ";
 
-$result=mysqli_query($conn,$fetch_products_query   );
+$result=mysqli_query($conn,$fetch_employees_query   );
 
 if(mysqli_num_rows($result)>0)
 {
@@ -66,31 +63,24 @@ if(mysqli_num_rows($result)>0)
     while($row = $result->fetch_assoc()) {
 //<td><a href='www.google.com'>". $row["cust_name"] ."</a></td>
         echo "<tr>
-        <td>". $row["prod_id"] ."</td>
-        <td>". $row["prod_name"] ."</td>
-        <td>". $row["prod_price"] ."</td>
-        <td>". $row["prod_availability"] ."</td>
-        <td>". $row["prod_category"] ."</td>
-        <td>". $row["prod_description"] ."</td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/editProduct.php?id=".$row["prod_id"]."'><span class='fas fa-edit'></span>
-        <span><strong  style='color:black' >Edit</strong></span></a></td>
-        <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PRODUCTS/removeProduct.php?id=".$row["prod_id"]."'><span class='fas fa-trash-alt' style='color:red'></span>
-        <span><strong style='color:black'>Remove</strong></span></a>
-        </button>
-        </td>
+        <td>". $row["order_id"] ."</td>
+        <td>". $row["cust_id"] ."</td>
+        <td>". $row["order_date"] ."</td>
+        <td>". $row["bill_amount"] ."</td>
+        <td>". $row["delivery_status"] ."</td>
+        <td>". $row["emp_id"] ."</td>
+       
+
+    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/editorder.php?id=".$row["order_id"]."'><span class='glyphicon glyphicon-edit'></span>
+        <span><strong>Edit</strong></span></a></td>
         </tr>";
       }
 }
 
 ?>
 
-
 <!--  get product details ends-->
 </table>
-
-<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
-            
-            </button>
 
 </div>
 <!-- Optional JavaScript --> 

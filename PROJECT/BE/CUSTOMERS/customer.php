@@ -35,33 +35,72 @@ https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 "sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous">
 </script> 
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
     </head>
 
 
 <body>
+
+
+<?php
+
+include 'dbconnection.php'; 
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+    
+    
+
+
+
+
+$username = $_POST["username"]; 
+$password = $_POST["password"]; 
+
+
+
+$loginQuery="select * from customer_login  where username='$username' and password='$password'";
+
+$result = mysqli_query($conn, $loginQuery);
+
+$row = mysqli_fetch_assoc($result);
+
+$id=$row["cust_id"];
+
+//echo $id;
+}
+?>
+
+
     <div class="container my-4 ">
         <h1 class="text-center">Login Here</h1> 
 
-        <form action="../BE/CUSTOMERS/customer.php" method="post">
-    <div class="form-group"> 
-        <label for="username">Username</label> 
-    <input type="text" class="form-control" id="username"
-        name="username" aria-describedby="emailHelp">    
-    </div>
+        
+    
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+            
+            </button> 
 
-    <div class="form-group"> 
-        <label for="password">Password</label> 
-        <input type="password" class="form-control"
-        id="password" name="password"> 
-    </div>
-    <button type="submit" class="btn btn-primary">
-        Login
-        </button>
-        <button type="button" class="btn btn-primary" >SignUp
+
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/createOrder.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>     Create Order</a>
+            
         </button> 
-        <button type="reset" class="btn btn-primary">Reset
-        </button>
-    </form>  
+        
     </div>
+    
+   
+
+  
+
+   
+
+
+
+
+
+
+
 </body>
 </html>
