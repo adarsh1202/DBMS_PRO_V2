@@ -49,10 +49,9 @@ include '../dbconnection.php';
 
 $cust_id=$_GET["id"];
 
-$fetch_employees_query="SELECT * from `orders` where cust_id=$cust_id";
+$fetch_employees_query="SELECT * from `orders` where `cust_id`='$cust_id'";
 
 $result=mysqli_query($conn,$fetch_employees_query   );
-
 if(mysqli_num_rows($result)>0)
 {
 
@@ -74,7 +73,6 @@ if(mysqli_num_rows($result)>0)
 
 <!--  get product details ends-->
 </table>
-
 </div>
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

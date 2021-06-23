@@ -15,7 +15,8 @@
 "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-        crossorigin="anonymous">  
+        crossorigin="anonymous"> 
+        <link rel="stylesheet" href="..\PRODUCTS\style1.css"> 
 </head>
     
 <body>
@@ -65,83 +66,83 @@ if($num == 1)
 ?>
 
 <!--  get product details ends-->
-
-
-<div class="container my-4 ">
-    
-    <h1 class="text-center">Enter Product Details</h1> 
-    <form action="../../BE/EMPLOYEES/updateEmployee.php" method="post">
-    
-
-    <div class="form-group"> 
-            <label for="employee_id"></label> 
-        <input type="number" class="form-control" id="employee_id"
-            name="employee_id" aria-describedby="emailHelp"  required    hidden  value=<?php echo $id; ?>>
-</div>
-
-       
-    <div class="form-group"> 
-            <label for="employee_name">Name</label> 
-        <input type="text" class="form-control" id="employee_name"
-            name="employee_name" aria-describedby="emailHelp"  required  disabled   value=<?php echo $name; ?>>
-
-     </div>
+<div class="bg-image3">
 
     
-     
-     <div class="form-group"> 
-            <label for="employee_gender">Gender</label> 
-        <input type="text" class="form-control" id="employee_gender"
-            name="employee_gender" aria-describedby="emailHelp"  required disabled     value=<?php echo $gender; ?>>
+        
+        <h1 class="text-center heading-black">Edit Employee Details</h1> 
+        <form action="../../BE/EMPLOYEES/updateEmployee.php" method="post">
+    <div class="white-container3">
 
-            </div>
-
-
-            <div class="form-group"> 
-            <label for="birthday">DOB</label><br>
-            <input type="date" class="form-control" id="birthday" name="birthday" required disabled   value=<?php echo $dob; ?>>
+        <div class="form-group"> 
+                <label for="employee_id"></label> 
+            <input type="number" class="form-control" id="employee_id"
+                name="employee_id" aria-describedby="emailHelp"  required    hidden  value=<?php echo $id; ?>>
         </div>
-
-
-
-        <div class="form-group"> 
-            <label for="join_date">Joining Date</label><br>
-            <input type="date" class="form-control" id="join_date" name="join_date" required  disabled   value=<?php echo $doj; ?>>
-        </div>
-
-        <div class="form-group"> 
-            <label for="employee_contact">Contact</label> 
-        <input type="text" class="form-control" id="employee_contact"
-            name="employee_contact" aria-describedby="emailHelp"  required      value=<?php echo $contact; ?>>
-
-            </div>
-
-        <div class="form-group"> 
-            <label for="employee_address">Address</label> 
-        <input type="textarea" class="form-control" id="employee_address"
-            name="employee_address" aria-describedby="emailHelp"  required     value=<?php echo $address; ?>>
-
-            </div>
-
-
-            <div class="form-group"> 
-            <label for="employee_salary">Salary</label> 
-        <input type="number" class="form-control" id="employee_salary"
-            name="employee_salary" aria-describedby="emailHelp"  required     value=<?php echo $contact; ?>>
-
-            </div>
-
- 
-
 
         
-        <button type="submit" class="btn btn-primary">
-        Save
-        </button>
-            
-    </form> 
-</div>
+        <div class="form-group"> 
+                <label for="employee_name">Name</label> 
+            <input type="text" class="form-control" id="employee_name"
+                name="employee_name" aria-describedby="emailHelp"  required  disabled   value=<?php echo $name; ?>>
+
+        </div>
+
+        
+        
+        <div class="form-group"> 
+                <label for="employee_gender">Gender</label> 
+            <input type="text" class="form-control" id="employee_gender"
+                name="employee_gender" aria-describedby="emailHelp"  required disabled     value=<?php echo $gender; ?>>
+
+                </div>
+
+
+                <div class="form-group"> 
+                <label for="birthday">DOB</label><br>
+                <input type="date" class="form-control" id="birthday" name="birthday" required disabled   value=<?php echo $dob; ?>>
+            </div>
+
+
+
+            <div class="form-group"> 
+                <label for="join_date">Joining Date</label><br>
+                <input type="date" class="form-control" id="join_date" name="join_date" required  disabled   value=<?php echo $doj; ?>>
+            </div>
+
+            <div class="form-group"> 
+                <label for="employee_contact">Contact</label> 
+            <input type="text" class="form-control" id="employee_contact"
+                name="employee_contact" aria-describedby="emailHelp"  required      value=<?php echo $contact; ?>>
+
+                </div>
+
+            <div class="form-group"> 
+                <label for="employee_address">Address</label> 
+            <input type="textarea" class="form-control" id="employee_address"
+                name="employee_address" aria-describedby="emailHelp"  required     value=<?php echo $address; ?>>
+
+                </div>
+
+
+                <div class="form-group"> 
+                <label for="employee_salary">Salary</label> 
+            <input type="number" class="form-control" id="employee_salary"
+                name="employee_salary" aria-describedby="emailHelp"  required     value=<?php echo $contact; ?>>
+
+                </div>
+
     
+
+
+            
+            <button type="submit" class="btn btn-primary">
+            Save
+            </button>
+                
+        </form> 
+    </div>
+</div>
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     

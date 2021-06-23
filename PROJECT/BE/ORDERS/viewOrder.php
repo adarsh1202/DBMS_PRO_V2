@@ -57,10 +57,15 @@ include '../dbconnection.php';
 
 $order_id=$_GET["id"];
 
+$fetch_cust_id = "SELECT * from `orders` WHERE order_id=$order_id";
+
 $fetch_order_details_query="SELECT * from `order_details` WHERE order_id=$order_id";
 
 
 $result=mysqli_query($conn,$fetch_order_details_query);
+$result2=mysqli_query($conn,$fetch_cust_id);
+$row2 = $result2->fetch_assoc();
+$cust_id=$row2["cust_id"];
 
 if(mysqli_num_rows($result)>0)
 {
@@ -131,9 +136,12 @@ if(mysqli_num_rows($result)>0)
 ?>
 </table>
 
-
+<button type="button" class="btn btn-primary"><a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $cust_id;?>' style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
+            
+            </button>
 
 </div>
+
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     

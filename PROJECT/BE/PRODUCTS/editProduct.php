@@ -17,11 +17,17 @@
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
+        <link rel="stylesheet" href="style1.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&family=Cabin:ital,wght@1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cabin:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
     
 <body>
     
 <!-- get product details starts -->
+<img class="bg" src="img2.jpg" alt="Grocery shoping">
 
 <?php 
 
@@ -77,7 +83,7 @@ if($num == 1)
 
 <div class="container my-4 ">
     
-    <h1 class="text-center">Enter Product Details</h1> 
+    <h1 class="text-center">Edit Product Details</h1> 
     <form action="../../BE/PRODUCTS/updateProduct.php" method="post">
     
         <div class="form-group"> 

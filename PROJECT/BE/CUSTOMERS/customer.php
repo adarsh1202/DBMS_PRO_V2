@@ -35,14 +35,13 @@ https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 "sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous">
 </script> 
-
+<link rel="stylesheet" href="..\PRODUCTS\style1.css">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     </head>
 
 
 <body>
-
 
 <?php
 
@@ -75,7 +74,7 @@ $id=$row["cust_id"];
 
 
     <div class="container my-4 ">
-        <h1 class="text-center">Login Here</h1> 
+        <h1 class="text-center">Order Here</h1> 
 
         
     
@@ -89,12 +88,8 @@ $id=$row["cust_id"];
         </button> 
         
     </div>
-    
-   
 
-  
-
-   
+    <img class="shopping-cart" src="shopping-cart-icon.jpg" alt="Grocery shoping">
 
 
 
