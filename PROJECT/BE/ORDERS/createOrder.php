@@ -124,7 +124,7 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["prod_description"] ."</td>
         <td>
         <select id='quantity_".$row["prod_id"]."'>
-        <option value='0' selected>0</option>
+        <option value='0' selected>Select Quantity</option>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>

@@ -17,6 +17,7 @@
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
     
 <body>
@@ -49,6 +50,8 @@ include '../dbconnection.php';
 
 $cust_id=$_GET["id"];
 
+
+
 $fetch_employees_query="SELECT * from `orders` where `cust_id`='$cust_id'";
 
 $result=mysqli_query($conn,$fetch_employees_query   );
@@ -63,7 +66,7 @@ if(mysqli_num_rows($result)>0)
         <td>". $row["delivery_status"] ."</td>
        
 
-    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/viewOrder.php?id=".$row["order_id"]."'><span class='glyphicon glyphicon-edit'></span>
+    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/viewOrder.php?id=".$row["order_id"]."'><span></span><i class='fa fa-eye' aria-hidden='true'></i>
         <span><strong>View</strong></span></a></td>
         </tr>";
       }
@@ -73,6 +76,11 @@ if(mysqli_num_rows($result)>0)
 
 <!--  get product details ends-->
 </table>
+
+
+<button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/CUSTOMERS/customer.php?id=<?php echo $cust_id?>" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
+            
+            </button>
 </div>
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

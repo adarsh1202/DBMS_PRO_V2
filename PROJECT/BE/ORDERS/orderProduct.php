@@ -51,6 +51,7 @@ $date=date("Y-m-d");
  $result=mysqli_query($conn,$insert_into_orders_query);
 
 
+
  // get latest order_id
 
 
@@ -60,6 +61,12 @@ $date=date("Y-m-d");
  $order_id=$order_details["order_id"];
 
  
+ $insert_into_payments_query="INSERT INTO `payment`(`order_id`,`cust_id`) VALUES ('$order_id','$cust_id')";
+
+ 
+
+ $payments=mysqli_query($conn,$insert_into_payments_query);
+ print($insert_into_payments_query);
 
  // insert into order details
 

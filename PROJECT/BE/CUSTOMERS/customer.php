@@ -46,48 +46,71 @@ https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 <?php
 
 include 'dbconnection.php'; 
-
+if(isset($_GET["id"]))
+{ 
+$id=$_GET["id"];
+}
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
     
-    
-
-
-
 
 $username = $_POST["username"]; 
-$password = $_POST["password"]; 
+$password = $_POST["password"];
 
 
 
 $loginQuery="select * from customer_login  where username='$username' and password='$password'";
 
 $result = mysqli_query($conn, $loginQuery);
+$num = mysqli_num_rows($result); 
 
-$row = mysqli_fetch_assoc($result);
+if($num==1)
+{
+    $row = mysqli_fetch_assoc($result);
 
-$id=$row["cust_id"];
+    $id=$row["cust_id"];
+
+}
+
+
+else
+{
+    echo'<script>alert("Incorrect Credentials")
+    window.location.href = "http://localhost/DBMS_PRO/PROJECT/FE/loginPage.html"</script>';
+
+ 
+
+}
+
 
 //echo $id;
 }
 ?>
 
 
-    <div class="container my-4 ">
-        <h1 class="text-center">Order Here</h1> 
 
-        
+    <div class="container_my-4  ">
     
+        <h1 class="text-center"><u>Order Here</u></h1> 
+
+       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/orderHistory.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
             
             </button> 
+            
 
 
         <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/createOrder.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>     Create Order</a>
             
         </button> 
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/loginPage.html" style="color: white;"><i class="fa fa-times-circle" aria-hidden="true"></i>  Log Out</a>
+            
+            </button>
+
+        
         
     </div>
+    
 
     <img class="shopping-cart" src="shopping-cart-icon.jpg" alt="Grocery shoping">
 

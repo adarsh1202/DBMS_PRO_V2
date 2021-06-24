@@ -29,7 +29,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    else 
    {
       
-      echo'<script>alert("Incorrect Credentials")</script>';
+      echo'<script>alert("Incorrect Credentials")
+      window.location.href = "http://localhost/DBMS_PRO/PROJECT/FE/adminLogin.html"</script>';
 
    } 
     

@@ -62,14 +62,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
          
          else
          {
-            echo'<script>alert("Passwords do not match")</script>';
+            echo'<script>alert("Passwords do not match")
+            window.location.href = "http://localhost/DBMS_PRO/PROJECT/FE/signUpPage.html"</script>';
+
          }
     }// end if 
     
    if($num>0) 
    {
-    echo'<script>alert("Username already exists.")</script>';
-      echo "Username not available. Please choose another one"; 
+      echo'<script>alert("Username already exists :)")
+      window.location.href = "http://localhost/DBMS_PRO/PROJECT/FE/signUpPage.html"</script>';
    } 
     
 }//end if   
