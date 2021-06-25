@@ -103,7 +103,7 @@ else
         <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/BE/ORDERS/createOrder.php?id=<?php echo $id;?>" style="color: white;"><i class="fa fa-plus-circle" aria-hidden="true"></i>     Create Order</a>
             
         </button> 
-        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/loginPage.html" style="color: white;"><i class="fa fa-times-circle" aria-hidden="true"></i>  Log Out</a>
+        <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/mainpage.html" style="color: white;"><i class="fa fa-times-circle" aria-hidden="true"></i>  Log Out</a>
             
             </button>
 
