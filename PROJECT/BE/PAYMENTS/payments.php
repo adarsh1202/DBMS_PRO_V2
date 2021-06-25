@@ -16,6 +16,8 @@
         integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">  
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
     
@@ -24,26 +26,31 @@
 <!-- get product details starts -->
 
 <div class="container my-4 ">
+     
+     
+           
 
-<u><h1 class="text-center">Customer Details</h1></u> 
+<u><h1 class="text-center">Payment Details</h1></u> 
 
 <br>
 
 <table class="table table-striped table-bordered">
 
 <tr class="thead-dark">
-<th>Name</th>
-<th>Contact</th>
-<th>Address</th>
+<th>Payment ID</th>
+<th>Order ID</th>
+<th>Customer ID</th>
+<th>Payment Status</th>
+<th></th>
 </tr>
 
 <?php 
 
-include 'dbconnection.php';
+include '../dbconnection.php';
 
-$fetch_customers_query="SELECT * from `customers` ";
+$fetch_employees_query="SELECT * from `payment` ";
 
-$result=mysqli_query($conn,$fetch_customers_query   );
+$result=mysqli_query($conn,$fetch_employees_query   );
 
 if(mysqli_num_rows($result)>0)
 {
@@ -51,10 +58,15 @@ if(mysqli_num_rows($result)>0)
     while($row = $result->fetch_assoc()) {
 //<td><a href='www.google.com'>". $row["cust_name"] ."</a></td>
         echo "<tr>
-        <td>". $row["cust_name"] ."</td>
-        
-        <td>". $row["cust_phno"] ."</td>
-        <td>". $row["cust_address"] ."</td>
+        <td>". $row["payment_id"] ."</td>
+        <td>". $row["order_id"] ."</td>
+        <td>". $row["cust_id"] ."</td>
+        <td>". $row["payment_status"] ."</td>
+       
+       
+
+    <td> <a href='http://localhost/DBMS_PRO/PROJECT/BE/PAYMENTS/editPayment.php?id=".$row["payment_id"]."'><span class='fas fa-edit'></span>
+    <span><strong  style='color:black' >Change</strong></span></a></td>
         </tr>";
       }
 }
@@ -63,6 +75,7 @@ if(mysqli_num_rows($result)>0)
 
 <!--  get product details ends-->
 </table>
+
 
 <button type="button" class="btn btn-primary"><a href="http://localhost/DBMS_PRO/PROJECT/FE/adminInterface.html" style="color: white;"><i class="fa fa-arrow-left" aria-hidden="true"></i> <strong>Back</strong></a>
             
